@@ -3,17 +3,18 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("dagger.hilt.android.plugin")
+    id("org.jetbrains.kotlin.plugin.compose") version ("2.0.0")
     id("com.google.devtools.ksp")
 }
 
 android {
     namespace = "com.droidcon.easyinvoice"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.droidcon.easyinvoice"
         minSdk = 21
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -60,8 +61,8 @@ dependencies {
     implementation ("androidx.hilt:hilt-navigation-compose:1.1.0")
     implementation ("androidx.constraintlayout:constraintlayout-compose:1.0.1")
 
-    implementation ("com.google.dagger:hilt-android:2.50")
-    ksp ("com.google.dagger:hilt-android-compiler:2.50")
+    implementation ("com.google.dagger:hilt-android:2.51.1")
+    ksp ("com.google.dagger:hilt-android-compiler:2.51.1")
 
     implementation ("androidx.room:room-runtime:2.6.1")
     implementation ("androidx.room:room-ktx:2.6.1")
